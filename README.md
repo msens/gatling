@@ -2,6 +2,27 @@
 
 This repository has single `Dockerfile` to build container with Gatling.
 
+Packages Gatling in a docker container
+
+
+## 
+Example usage
+
+build:
+```bash
+docker build -t "myname/gatling:latest" .
+```
+
+run:
+```bash
+docker run -it --rm -v $PWD/conf:/opt/gatling/conf -v $PWD/user-files:/opt/gatling/user-files -v $PWD/results:/opt/gatling/results myname/gatling
+```
+
+
+
+
+
+
 # Base Docker Image
 
 * [java](https://registry.hub.docker.com/_/java/)
